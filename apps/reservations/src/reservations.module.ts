@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
+import { DatabaseModule, LoggerModule } from '@app/common';
 import { ReservationsService } from './reservations.service';
 import { ReservationsController } from './reservations.controller';
-import { DatabaseModule, LoggerModule } from '@app/common';
 import { ReservationsRepository } from './reservations.repository';
 import {
   ReservationDocument,
@@ -10,8 +10,9 @@ import {
 
 @Module({
   imports: [
-    DatabaseModule,
+    DatabaseModule, // This import sets the MongoDB connection string
     DatabaseModule.forFeature([
+      // this import makes sure that mongoose knows the Schema
       { name: ReservationDocument.name, schema: ReservationSchema },
     ]),
     LoggerModule,

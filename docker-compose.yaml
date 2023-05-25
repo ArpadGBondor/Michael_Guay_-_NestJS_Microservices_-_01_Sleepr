@@ -11,6 +11,18 @@ services:
       - '3000:3000'
     volumes:
       - .:/usr/src/app
+  auth:
+    image: sleepr_auth
+    container_name: sleepr_auth
+    build:
+      context: .
+      dockerfile: ./apps/auth/Dockerfile
+      target: development
+    command: pnpm start:dev auth
+    ports:
+      - '3001:3001'
+    volumes:
+      - .:/usr/src/app
   mongo:
     image: mongo
     container_name: sleepr_mongo
