@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "000c2cc6-2a7d-4d08-8d4a-7e893b7cbb17",
+		"name": "Michael Guay - NestJS Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26616331"
+	},
+	"item": [
+		{
+			"name": "01 - Sleepr",
+			"item": [
+				{
+					"name": "Create reservation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2022-12-20\",\n    \"endDate\": \"2022-12-25\",\n    \"placeId\": \"12345\",\n    \"invoiceId\": \"493\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/reservations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/reservations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one reservation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/reservations/646dee97c5c6c2c0c200e1e3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations",
+								"646dee97c5c6c2c0c200e1e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update reservation",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"endDate\": \"2022-12-31\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/reservations/646dee97c5c6c2c0c200e1e3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations",
+								"646dee97c5c6c2c0c200e1e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete reservation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/reservations/646dee97c5c6c2c0c200e1e3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations",
+								"646dee97c5c6c2c0c200e1e3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
