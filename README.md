@@ -2,6 +2,10 @@
 
 ## Udemy - [Michael Guay - NestJS Microservices: Build & Deploy a Scaleable Backend](https://www.udemy.com/course/nestjs-microservices-build-deploy-a-scaleable-backend/)
 
+- Section 1: Introduction
+- Section 2: Common Library
+- Section 3: Authentication
+
 ## Deployed
 
 - Not deployed yet
@@ -24,9 +28,22 @@
 
 - Not yet.
 
-## Environment variable:
+## Environment variables:
 
-- MONGODB_URI - MongoDB connection string
+- auth: `apps/auth/.env`
+  - MONGODB_URI=mongodb://mongo:27017/sleepr
+    - connects to mongo image in docker-compose
+  - JWT_SECRET=R30j3GPiQKr+BsRLsNdRauqVxEIYt/3ICWUARtGoBnosjN6JYq3SzuiCK4Y4Tup9
+    - random string generated with `openssl rand -base64 48`
+  - JWT_EXPIRATION=3600
+  - HTTP_PORT=3001
+  - TCP_PORT=3002
+- reservations: `apps/reservations/.env`
+  - MONGODB_URI=mongodb://mongo:27017/sleepr
+    - connects to mongo image in docker-compose
+  - PORT=3001
+  - AUTH_HOST=auth
+  - AUTH_PORT=3002
 
 ## The instructor's solution:
 

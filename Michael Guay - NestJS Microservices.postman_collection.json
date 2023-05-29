@@ -10,121 +10,218 @@
 			"name": "01 - Sleepr",
 			"item": [
 				{
-					"name": "Create reservation",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"startDate\": \"2022-12-20\",\n    \"endDate\": \"2022-12-25\",\n    \"placeId\": \"12345\",\n    \"invoiceId\": \"493\"\n}"
+					"name": "Reservations",
+					"item": [
+						{
+							"name": "Create reservation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"startDate\": \"2022-12-20\",\n    \"endDate\": \"2022-12-25\",\n    \"placeId\": \"12345\",\n    \"invoiceId\": \"493\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/reservations",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reservations"
+									]
+								}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "localhost:3000/reservations",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"reservations"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List all reservations",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:3000/reservations",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"reservations"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get one reservation",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:3000/reservations/646dee97c5c6c2c0c200e1e3",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"reservations",
-								"646dee97c5c6c2c0c200e1e3"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update reservation",
-					"request": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"endDate\": \"2022-12-31\"\n}"
+						{
+							"name": "List all reservations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/reservations",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reservations"
+									]
+								}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "localhost:3000/reservations/646dee97c5c6c2c0c200e1e3",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"reservations",
-								"646dee97c5c6c2c0c200e1e3"
-							]
+						{
+							"name": "Get one reservation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/reservations/646e0d1e22499176edc4d517",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reservations",
+										"646e0d1e22499176edc4d517"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update reservation",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"endDate\": \"2022-12-31\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/reservations/646dee97c5c6c2c0c200e1e3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reservations",
+										"646dee97c5c6c2c0c200e1e3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete reservation",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/reservations/646dee97c5c6c2c0c200e1e3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reservations",
+										"646dee97c5c6c2c0c200e1e3"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "Delete reservation",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "localhost:3000/reservations/646dee97c5c6c2c0c200e1e3",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"reservations",
-								"646dee97c5c6c2c0c200e1e3"
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Users",
+							"item": [
+								{
+									"name": "Create user",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"test@test.test\",\n    \"password\": \"StrongP@ssword123\"\n}"
+										},
+										"url": {
+											"raw": "localhost:3001/users",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get logged in user based on cookie",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "localhost:3001/users",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								}
 							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"test@test.test\",\n    \"password\": \"StrongP@ssword123\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3001/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				}
 			]
 		}
