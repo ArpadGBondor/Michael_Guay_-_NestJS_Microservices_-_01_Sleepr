@@ -25,7 +25,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"startDate\": \"2022-12-20\",\n    \"endDate\": \"2022-12-25\",\n    \"placeId\": \"12345\",\n    \"invoiceId\": \"493\"\n}"
+									"raw": "{\n    \"startDate\": \"2022-12-20\",\n    \"endDate\": \"2022-12-25\",\n    \"placeId\": \"12345\",\n    \"invoiceId\": \"493\",\n    \"charge\": {\n        \"amount\": 5.05,\n        \"card\":{\n            \"cvc\": \"111\",\n            \"exp_month\": 10,\n            \"exp_year\": 2023,\n            \"number\": \"4111111111111111\"\n        }\n    }\n}"
 								},
 								"url": {
 									"raw": "localhost:3000/reservations",
