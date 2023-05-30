@@ -5,6 +5,7 @@
 - Section 1: Introduction
 - Section 2: Common Library
 - Section 3: Authentication
+- Section 4: Payments
 
 ## Deployed
 
@@ -44,6 +45,12 @@
   - PORT=3001
   - AUTH_HOST=auth
   - AUTH_PORT=3002
+  - PAYMENTS_HOST=payments
+  - PAYMENTS_PORT=3003
+- payments: `apps/reservations/.env`
+  - PORT=3003
+  - STRIPE_SECRET_KEY
+    - get your key from [Stripe](https://stripe.com/)
 
 ## The instructor's solution:
 
