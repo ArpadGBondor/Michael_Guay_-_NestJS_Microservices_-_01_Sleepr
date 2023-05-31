@@ -6,6 +6,7 @@
 - Section 2: Common Library
 - Section 3: Authentication
 - Section 4: Payments
+- Section 5: Notifications
 
 ## Deployed
 
@@ -47,10 +48,22 @@
   - AUTH_PORT=3002
   - PAYMENTS_HOST=payments
   - PAYMENTS_PORT=3003
-- payments: `apps/reservations/.env`
+- payments: `apps/payments/.env`
   - PORT=3003
   - STRIPE_SECRET_KEY
     - get your key from [Stripe](https://stripe.com/)
+  - NOTIFICATIONS_HOST=notifications
+  - NOTIFICATIONS_PORT=3004
+- notifications: `apps/notifications/.env`
+  - PORT=3004
+  - SMTP_USER=
+    - Gmail email address
+  - GOOGLE_OAUTH_CLIENT_ID=
+    - Client Id from https://console.cloud.google.com/
+  - GOOGLE_OAUTH_CLIENT_SECRET=
+    - Client Secret from https://console.cloud.google.com/
+  - GOOGLE_OAUTH_REFRESH_TOKEN=
+    - Refresh token from https://developers.google.com/oauthplayground
 
 ## The instructor's solution:
 
